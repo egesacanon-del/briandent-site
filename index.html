@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BriandEnt Fibre | Fast, reliable home internet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d1320;--bg2:#141c2e;--ink:#f4f6fb;--mute:#aab3c5;--line:#26304a;--or:#e2501b;--card:#fff;--cardink:#14192a;--cardmute:#4b5368;color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+
+:root[data-theme="dark"]{--bg:#0d1320;--bg2:#141c2e;--ink:#f4f6fb;--mute:#aab3c5;--line:#26304a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.6 Manrope,system-ui,sans-serif}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.brand{font:800 1.15rem Sora,sans-serif;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo{background:#fff;border-radius:10px;padding:2px 4px;height:40px;width:auto}
+.brand i{width:28px;height:28px;background:var(--or);transform:rotate(45deg) scale(.75);border-radius:5px;display:block}
+nav a{margin-left:18px;text-decoration:none;color:var(--mute);font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--or);color:#fff;text-decoration:none;font:700 1rem Sora,sans-serif;padding:14px 24px;border-radius:999px}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:none;border:2px solid var(--line);color:var(--ink)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+.hero{position:relative;overflow:hidden;padding:56px 0 72px}
+.hero svg{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{font-size:clamp(2.3rem,7vw,4.4rem);font-weight:800;max-width:14ch}
+.hero p{font-size:1.15rem;color:var(--mute);max-width:46ch;margin:20px 0 30px}
+.hero .row{display:flex;gap:12px;flex-wrap:wrap}
+.streak{stroke-dasharray:90 900;animation:run 6s linear infinite;fill:none;stroke-linecap:round}
+@keyframes run{to{stroke-dashoffset:-990}}
+@media (prefers-reduced-motion:reduce){.streak{animation:none}}
+section{padding:64px 0}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-bottom:10px}
+.sub{color:var(--mute);margin:0 0 32px;max-width:52ch}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:18px}
+.plan{background:var(--card);color:var(--cardink);border-radius:120px 120px 28px 28px;padding:0 22px 26px;text-align:center;overflow:hidden}
+.plan .cap{margin:0 -22px 18px;padding:26px 10px 16px;color:#fff;font:800 1.35rem Sora,sans-serif}
+.plan .cap small{display:block;font:600 .75rem Manrope,sans-serif;opacity:.85}
+.plan .price{font:800 1.7rem Sora,sans-serif}
+.plan .price span{font-size:.8rem;font-weight:600;color:var(--cardmute)}
+.plan ul{list-style:none;padding:0;margin:16px 0 20px;color:var(--cardmute);font-size:.95rem}
+.plan li{padding:4px 0}
+.plan a{display:block;background:var(--cardink);color:#fff;text-decoration:none;font:700 .95rem Sora,sans-serif;padding:12px;border-radius:999px}
+.c1{background:#1e9bd7}.c2{background:#5b4fd1}.c3{background:#8a3fc0}.c4{background:#e8731a}
+.plan.pop{outline:3px solid var(--or);outline-offset:3px}
+.note{color:var(--mute);font-size:.9rem;margin-top:18px}
+.nf{background:var(--or);color:#fff;border-radius:28px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.nf h2{margin:0 0 6px}.nf p{margin:0;opacity:.92}
+.nf .btn{background:#fff;color:#14192a}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:28px}
+.why h3{font-size:1.1rem;margin-bottom:6px}
+.why p{margin:0;color:var(--mute)}
+.contact{background:var(--bg2);border-top:1px solid var(--line)}
+.contact dl{margin:24px 0 0;display:grid;grid-template-columns:auto 1fr;gap:10px 22px}
+.contact dt{color:var(--mute)}.contact dd{margin:0;font-weight:600;word-break:break-word}
+footer{padding:24px 0;color:var(--mute);font-size:.9rem;border-top:1px solid var(--line)}
+.social{display:flex;gap:12px;margin-bottom:14px}
+.social[hidden]{display:none}
+.social a{width:42px;height:42px;border:2px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--ink)}
+.social a:hover{background:var(--or);border-color:var(--or);color:#fff}
+.social svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:560px){nav{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap"><header>
+<a class="brand" href="#top"><img class="logo" src="data:image/png;base64,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" alt="BriandEnt logo" width="60" height="40">BriandEnt Fibre</a>
+<nav><a href="#packages">Packages</a><a href="#why">Why us</a><a href="#areas">Areas</a><a href="#contact">Contact</a></nav>
+</header></div>
+
+<main id="top">
+<div class="hero">
+<svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<path class="streak" d="M-20 420 C250 380 380 120 1020 60" stroke="#e2501b" stroke-width="3"/>
+<path class="streak" style="animation-delay:-2s" d="M-20 470 C300 440 460 180 1020 130" stroke="#e8731a" stroke-width="2"/>
+<path class="streak" style="animation-delay:-4s" d="M-20 380 C200 330 420 80 1020 -10" stroke="#5b4fd1" stroke-width="2"/>
+</svg>
+<div class="wrap">
+<h1>Fibre internet that keeps up with you.</h1>
+<p>Reliable home and office internet from BriandEnt Fibre. Pick a speed, tell us where you are, and we will get you connected.</p>
+<div class="row">
+<a class="btn" href="https://wa.me/254719368652?text=Hello%20BriandEnt%20Fibre%2C%20I%20want%20to%20get%20connected." >Chat on WhatsApp</a>
+<a class="btn ghost" href="#packages">See packages</a>
+</div>
+</div>
+</div>
+
+<section id="packages"><div class="wrap">
+<h2>Internet packages</h2>
+<p class="sub">Monthly prices in Kenya shillings. Speeds are “up to”.</p>
+<div class="plans">
+<article class="plan"><div class="cap c1"><small>Up to</small>3 Mbps</div>
+<div class="price">KSh 1,000 <span>/ month</span></div>
+<ul><li>Email</li><li>Web browsing</li><li>Social media</li><li>Standard definition</li><li>Movies</li><li>Music streaming</li></ul>
+<a href="https://wa.me/254719368652?text=I%20want%20the%203%20Mbps%20package%20(KSh%201000)">Choose 3 Mbps</a></article>
+
+<article class="plan"><div class="cap c2"><small>Up to</small>5 Mbps</div>
+<div class="price">KSh 1,500 <span>/ month</span></div>
+<ul><li>Email</li><li>Web browsing</li><li>Social media</li><li>HD video streaming</li><li>Multiple downloads</li></ul>
+<a href="https://wa.me/254719368652?text=I%20want%20the%205%20Mbps%20package%20(KSh%201500)">Choose 5 Mbps</a></article>
+
+<article class="plan pop"><div class="cap c3"><small>Up to</small>10 Mbps</div>
+<div class="price">KSh 2,500 <span>/ month</span></div>
+<ul><li>Email</li><li>Web browsing</li><li>Social media</li><li>HD video streaming</li><li>Multiple downloads</li><li>Gaming</li></ul>
+<a href="https://wa.me/254719368652?text=I%20want%20the%2010%20Mbps%20package%20(KSh%202500)">Choose 10 Mbps</a></article>
+
+<article class="plan"><div class="cap c4"><small>Up to</small>20 Mbps</div>
+<div class="price">KSh 4,500 <span>/ month</span></div>
+<ul><li>Email</li><li>Web browsing</li><li>Social media</li><li>HD video streaming</li><li>Multiple downloads</li><li>Gaming</li></ul>
+<a href="https://wa.me/254719368652?text=I%20want%20the%2020%20Mbps%20package%20(KSh%204500)">Choose 20 Mbps</a></article>
+</div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="nf">
+<div><h2>Premium Netflix account</h2><p>Add a premium Netflix account to your connection for KSh 500.</p></div>
+<a class="btn" href="https://wa.me/254719368652?text=I%20want%20the%20Netflix%20premium%20account%20(KSh%20500)">Ask about Netflix</a>
+</div>
+</div></section>
+
+<section id="why"><div class="wrap">
+<h2>Why BriandEnt Fibre</h2>
+<p class="sub">Simple plans, clear prices, and a real person on the other end of the phone.</p>
+<div class="why">
+<div><h3>Fibre-based connection</h3><p>Built on fibre so streaming, calls and downloads stay smooth.</p></div>
+<div><h3>Plans for every home</h3><p>From light browsing to HD streaming and gaming, pick the speed you need.</p></div>
+<div><h3>Talk to us directly</h3><p>Message or call and get answers without a call-centre queue.</p></div>
+</div>
+</div></section>
+
+<section id="steps"><div class="wrap">
+<h2>How to get connected</h2>
+<p class="sub">Three simple steps from message to browsing.</p>
+<div class="why">
+<div><h3 style="color:var(--or)">1. Message us</h3><p>Send your location and the package you want on WhatsApp or call us.</p></div>
+<div><h3 style="color:var(--or)">2. We install</h3><p>Our team confirms coverage, visits you and sets up your connection.</p></div>
+<div><h3 style="color:var(--or)">3. Pay and browse</h3><p>Pay through our M-Pesa Paybill using your customer number and start enjoying fast internet.</p></div>
+</div>
+</div></section>
+
+<section id="areas"><div class="wrap">
+<h2>Where we're connected</h2>
+<p class="sub">We serve these areas in Nairobi and Kajiado. Not on the list? Message us and we will check your location.</p>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px">
+<li style="border:2px solid var(--line);border-radius:999px;padding:10px 20px;font:700 1rem Sora,sans-serif">Utawala</li>
+<li style="border:2px solid var(--line);border-radius:999px;padding:10px 20px;font:700 1rem Sora,sans-serif">Kiserian</li>
+<li style="border:2px solid var(--line);border-radius:999px;padding:10px 20px;font:700 1rem Sora,sans-serif">Tassia</li>
+<li style="border:2px solid var(--line);border-radius:999px;padding:10px 20px;font:700 1rem Sora,sans-serif">Fedha</li>
+<li style="border:2px solid var(--line);border-radius:999px;padding:10px 20px;font:700 1rem Sora,sans-serif">Umoja</li>
+<li style="border:2px solid var(--line);border-radius:999px;padding:10px 20px;font:700 1rem Sora,sans-serif">Donholm</li>
+</ul>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<h2>Get connected</h2>
+<p class="sub">Send us your location and the package you want. We will reply with the next steps.</p>
+<a class="btn" href="https://wa.me/254719368652?text=Hello%20BriandEnt%20Fibre%2C%20I%20want%20to%20get%20connected.">Chat on WhatsApp</a>
+<dl>
+<dt>M-Pesa Paybill</dt><dd>4102569 <span style="font-weight:400;color:var(--mute)">(account number: your personal customer number, given when you sign up)</span></dd>
+<dt>Phone</dt><dd><a href="tel:+254719368652">+254 719 368 652</a></dd>
+<dt>Email</dt><dd><a href="mailto:briansammy47@gmail.com">briansammy47@gmail.com</a></dd>
+</dl>
+</div></section>
+</main>
+<footer><div class="wrap">
+<!-- SOCIAL LINKS: paste each page's URL into href, then delete the word hidden on the next line -->
+<div class="social" hidden>
+<a href="PASTE-FACEBOOK-LINK" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5v4h3v7h4v-7h3l1-4h-4V7.5c0-.3.2-.5.5-.5H15z"/></svg></a>
+<a href="PASTE-INSTAGRAM-LINK" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+<a href="PASTE-YOUTUBE-LINK" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></svg></a>
+<a href="PASTE-X-LINK" aria-label="X (Twitter)" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+</div>© 2026 BriandEnt Fibre. A BRIAND ENTERTAINMENT company.</div></footer>
+</body>
+</html>
